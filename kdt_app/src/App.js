@@ -1,13 +1,24 @@
 import Test from "./Test";
 
 function App() {
+
+  let number = 1;
+
+  const increment = () => {
+    number++;
+    console.log(number);
+  }
+
+  const decrement = () => {
+    number--;
+    console.log(number);
+  }
+
   return (
     <div>
-      <Test text="React"/>
-      <Test text="JSX" />
-      <Test text="어려워요?"/>
-      <Test />
-      <Test />
+      <h1>{number}</h1>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
     </div>
   );
 }
