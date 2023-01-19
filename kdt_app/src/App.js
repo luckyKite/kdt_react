@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import Test from './Test';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <h1>{number}</h1>
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
+      <Test text = {number}/>
     </div>
   );
 }
