@@ -1,16 +1,16 @@
-import Test from "./Test";
+import {useState} from 'react';
 
 function App() {
 
-  let number = 1;
+  const [number, setNumber] = useState(0);
 
   const increment = () => {
-    number++;
+    setNumber(number+1);
     console.log(number);
   }
 
   const decrement = () => {
-    number--;
+    setNumber(number-1);
     console.log(number);
   }
 
