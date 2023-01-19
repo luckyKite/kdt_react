@@ -1,10 +1,14 @@
 import React from 'react';
+import InnerTest from './InnerTest';
 
-export default function Test(props) {
+function Test({text}) {
   return ( 
     <div>
-      <h1>{props.text} 여기에 값이 표현됩니다. </h1>
+      <h1>{text} 값이 표현됩니다.</h1>
+      <InnerTest innerTxt = {text}/>
+      <InnerTest innerTxt= "ABCD"/>
     </div>
   );
 }
 
+export default Test;
