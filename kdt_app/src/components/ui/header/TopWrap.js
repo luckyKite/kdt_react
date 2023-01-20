@@ -1,5 +1,6 @@
 import React from 'react';
 import topMenuDatas from '../../../datas/topMenuDatas';
+import Logo from './Logo';
 import TopMenuLi from './TopMenuLi';
 
 function TopWrap() {
@@ -9,7 +10,7 @@ function TopWrap() {
         <div id="gnb">
           <div className="sub_gnb_wrap">
             <div className="sub_gnb_wrap_inner">
-              <h1 className="logo"><a href="/" title="스타벅스 메인페이지" >스타벅스 코리아</a></h1>
+              <Logo />
               <nav className="util_nav">
                 <ul>
                   {
