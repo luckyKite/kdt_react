@@ -1,32 +1,32 @@
-import Footer from "./components/layouts/Footer";
-import Header from "./components/layouts/Header";
 import FruitPage from "./FruitPage";
-import Main from "./pages/Main"
+import { fruit } from "./datas/sampleDatas";
+import { useState } from "react";
 
 function App() {
 
-  const fruit = [
-    { id: 1, name: '사과', quantity: 2, isView: 1 },
-    { id: 2, name: '바나나', quantity: 3, isView: 0},
-    { id: 3, name: '포도', quantity: 5, isView: 1},
-    { id: 4, name: '배', quantity: 10, isView: 1},
-    { id: 5, name: '호박', quantity: 1, isView: 0}
-  ];
+  const myDate = fruit;
+
+  const [cart, setCart] = useState ({
+    name: "과일이름",
+    quantity: 0
+  });
+  
+  const addCart = () => {
+    setCart({...cart, quantity: cart.quantity + 1, name: myDate[0].name})
+  }    
+
 
   return (
     <>
-    {
-      fruit.map( 
-        (item) => (
-        <FruitPage
-          key={item.id}
-          name={item.name}
-          quantity={item.quantity}
-          isView={item.isView}
-        />
-        )
-      )
-    }
+      {myDate[0].name}
+      <p>장바구니</p>
+      <button onClick={addCart}>장바구니 담기</button>
+
+      <div>
+        <h3>내 장바구니</h3>
+        <h4>상품명: {cart.name}</h4>
+        <h4>수량: {cart.quantity}</h4>
+      </div>
     </>
   );
 }
