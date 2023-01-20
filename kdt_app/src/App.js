@@ -8,7 +8,7 @@ function App() {
     <>
       <div id="wrap">
         <Header/>
-        <Main/>
+        <Main />
         <Footer/>
       </div>
     </>
