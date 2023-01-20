@@ -3,8 +3,9 @@ import React from 'react';
 function Header() {
   return ( 
     <>
-      <div id="top_MSR" >
-				<div className="top_msr_wrap" style="display:none;">
+     test
+     <div id="top_MSR" >
+				<div className="top_msr_wrap" style={{display:"block"}}>
 					<div className="user_greet">
 						<div className="user_pic_area">
 							<img alt="사용자 아이디" src="//image.istarbucks.co.kr/common/img/common/user_pic_sample.jpg" />
@@ -19,7 +20,7 @@ function Header() {
 				
 					<span className="msr_sep_line"></span>
 
-					<div className="user_level" style="display:none;">
+					<div className="user_level" style={{display:"block"}}>
 						<a href="/my/reward.do">
 							<p className="level_star_bg en">0</p>
 							<p className="user_level_txt"> <strong className="t_ac8432 en userGrade">Gold Level</strong><br /><strong>무료음료</strong> 획득 별까지<br/><strong className="necessaryStar">0개</strong> 남았습니다. </p>
@@ -36,7 +37,7 @@ function Header() {
 					<span className="msr_sep_line"></span>
 				
 					<div className="msr_card_info w_card_pic">
-						<p className="msr_card_area" onclick="location.href = '/my/mycard_index.do';" style="cursor:pointer;"><img alt="" /></p>
+						<p className="msr_card_area" style={{cursor:"pointer"}}><img alt="" /></p>
 						<p className="card_info_txt">잔액 <strong className="en balance">0</strong>원</p>
 						<p className="btn_other_more"><a href="/my/mycard_index.do">다른 카드 보기</a></p>
 					</div>
@@ -62,7 +63,7 @@ function Header() {
 				
 					<div className="sb_card_regi">
 						<a href="#">
-							<p className="icon_add_card" onclick="location.href = '/my/mycard_info_input.do';"><img alt="카드등록 아이콘" src="//image.istarbucks.co.kr/common/img/common/icon_add_card.png" /></p>
+							<p className="icon_add_card"><img alt="카드등록 아이콘" src="//image.istarbucks.co.kr/common/img/common/icon_add_card.png" /></p>
 							<p className="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br/>카드를 등록하시고<br/>다양한 리워드를<br/>만나보세요.</p>
 						</a>
 					</div>
@@ -190,7 +191,7 @@ function Header() {
 							
 									<li><a href="/my/vocList.do" required="login">My 고객의 소리</a></li>
 							<li><a href="/my/eReceiptList.do" required="login">전자영수증</a></li>
-							<li className="msRnb_btn"><a href="#" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
+							<li className="msRnb_btn"><a href="#">개인컵 리워드 설정</a></li>
 							<li><a href="/edt/expressDtList.do" required="login">My DT Pass</a></li>
 							<li>
 								<a role="button" href="#">개인정보관리<span className="mob_gnb_arrow_down"></span></a>
@@ -484,6 +485,35 @@ function Header() {
 				</div>
 			</div>
 			
+      <div id="mstopWrap">
+        <div id="gnb">
+          
+          <div class="sub_gnb_wrap">
+            <div class="sub_gnb_wrap_inner">
+              <h1 class="logo"><a href="/" title="스타벅스 메인페이지" >스타벅스 코리아</a></h1>
+              <nav class="util_nav">
+                <ul>
+                  <li class="util_nav01 sign_out" style={{display:"block"}}><a href="#">Sign out</a></li>
+                  <li class="util_nav01 sign_in"><a href="#">Sign In</a></li>
+                  <li class="util_nav02"><a href="/my/index.do" required="login">My Starbucks</a></li>
+                  <li class="util_nav03"><a href="/util/index.do">Customer Service & Ideas</a></li>
+                  <li class="util_nav04"><a href="/store/store_map.do">Find a Store</a></li>
+                </ul>
+              </nav>
+              <p class="btn_search">
+                <a href="#"><img alt="통합검색" src="//image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"/></a>
+              </p>
+              <a href="#" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"></a>
+            </div>
+            <nav class="sub_gnb_nav">
+              <div class="sub_gnb_nav_inner">
+              </div>
+            </nav>
+          </div>
+          
+        </div>
+      </div>		
+
     </>
   );
 }
