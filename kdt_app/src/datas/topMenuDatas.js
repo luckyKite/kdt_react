@@ -1,12 +1,12 @@
 const topMenuDatas = [
   {
     id: 1,
-    name: "Sign Out",
+    name: "Sign In",
     link: "#"
   },
   {
     id: 2,
-    name: "Sign In",
+    name: "Sign Out",
     link: "#"
   },
   {
@@ -21,6 +21,11 @@ const topMenuDatas = [
   },
   {
     id: 5,
+    name: "Ideas",
+    link: "/Ideas"
+  },
+  {
+    id: 6,
     name: "Find a Store",
     link: "/FindAStore"
   }
