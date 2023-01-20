@@ -4,13 +4,17 @@ import Main from "./pages/Main"
 
 function App() {
 
+  const fruit = ['apple', 'mango', 'banana', 'melon'];
+
   return (
     <>
-      <div id="wrap">
-        <Header/>
-        <Main />
-        <Footer/>
-      </div>
+    {
+      fruit.map( fruit => (
+        <p>{fruit}</p>
+      )
+
+      )
+    }
     </>
   );
 }
