@@ -7,7 +7,6 @@ function NewRewards() {
         <div className="new-rewards_logo">
           <img src="https://image.istarbucks.co.kr/common/img/main/rewards-logo.png" alt="Starbucks Rewards" /> 
         </div>
-        
         <div className="new-rewards_conts">
           <div className="info-cont">
             <div className="info-cont_txt">
