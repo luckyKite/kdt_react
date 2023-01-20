@@ -1,20 +1,23 @@
 import React from 'react';
+import topMenuDatas from '../../../datas/topMenuDatas';
 
 function TopWrap() {
+
+  console.log(topMenuDatas);
+
   return ( 
     <div id="mstopWrap">
         <div id="gnb">
-          
           <div className="sub_gnb_wrap">
             <div className="sub_gnb_wrap_inner">
               <h1 className="logo"><a href="/" title="스타벅스 메인페이지" >스타벅스 코리아</a></h1>
               <nav className="util_nav">
                 <ul>
-                  <li className="util_nav01 sign_out" style={{display:"block"}}><a href="#">Sign out</a></li>
-                  <li className="util_nav01 sign_in"><a href="#">Sign In</a></li>
-                  <li className="util_nav02"><a href="/my/index.do" required="login">My Starbucks</a></li>
-                  <li className="util_nav03"><a href="/util/index.do">Customer Service & Ideas</a></li>
-                  <li className="util_nav04"><a href="/store/store_map.do">Find a Store</a></li>
+                  {
+                    topMenuDatas.map(item => (
+                      <li key={item.id} className="util_nav01"><a href={item.link}>{item.name}</a></li>
+                    ))
+                  }
                 </ul>
               </nav>
               <p className="btn_search">
@@ -27,10 +30,8 @@ function TopWrap() {
               </div>
             </nav>
           </div>
-          
         </div>
       </div>		
-
    );
 }
 
