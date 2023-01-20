@@ -1,9 +1,8 @@
 import React from 'react';
 import topMenuDatas from '../../../datas/topMenuDatas';
+import TopMenuLi from './TopMenuLi';
 
 function TopWrap() {
-
-  console.log(topMenuDatas);
 
   return ( 
     <div id="mstopWrap">
@@ -15,7 +14,10 @@ function TopWrap() {
                 <ul>
                   {
                     topMenuDatas.map(item => (
-                      <li key={item.id} className="util_nav01"><a href={item.link}>{item.name}</a></li>
+                      <TopMenuLi 
+                        key={item.id}
+                        item={item}
+                      />
                     ))
                   }
                 </ul>
