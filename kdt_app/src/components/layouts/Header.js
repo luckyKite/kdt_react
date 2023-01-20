@@ -7,7 +7,7 @@ import TopWrap from '../ui/header/TopWrap';
 function Header() {
   return ( 
     <>
-     <TopMsr />
+     <TopMsr /> 
      <TabletGnb />
      <MobGnb />
      <TopWrap />
