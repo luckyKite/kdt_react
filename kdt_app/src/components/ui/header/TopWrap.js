@@ -10,7 +10,10 @@ function TopWrap() {
         <div id="gnb">
           <div className="sub_gnb_wrap">
             <div className="sub_gnb_wrap_inner">
-              <Logo />
+              <Logo 
+                title="Stabucks" 
+                text="스타벅스 코리아"
+              />
               <nav className="util_nav">
                 <ul>
                   {
