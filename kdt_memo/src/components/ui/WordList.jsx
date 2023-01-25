@@ -4,12 +4,30 @@ import Forms from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 
-function WordList({word}) {
+function WordList({word, isCheck, setIsCheck}) {
   
   const [isView, setIsView] = useState(false);
 
   const handleView = () => {
     setIsView(!isView);
+  }
+
+  const handleCheck = () => {
+    fetch(`http://localhost:3001/words/${word.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify({
+        ...word,
+        isDone: !word.isDone
+      })
+    }).then(res => {
+      console.log(res)
+      if(res.ok) {
+        setIsCheck(!isCheck);
+      }
+    })
   }
 
   return ( 
@@ -19,8 +37,9 @@ function WordList({word}) {
         <Forms>
           <Forms.Check 
             type="checkbox" 
+            defaultChecked={word.isDone} 
             disabled={word.isDone}
-            defaultChecked={word.isDone}  
+            onChange={handleCheck} 
           />
         </Forms>
       </td>
