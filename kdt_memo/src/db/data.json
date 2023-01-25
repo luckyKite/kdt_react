@@ -125,6 +125,13 @@
       "eng": "mango",
       "kor": "망고",
       "isDone": false
+    },
+    {
+      "day": 1,
+      "eng": "book",
+      "kor": "책",
+      "isDone": false,
+      "id": 13
     }
   ]
 }
