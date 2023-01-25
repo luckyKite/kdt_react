@@ -1,3 +1,4 @@
+import React from 'react';
 import MainTable from '../ui/MainTable';
 
 function Main() {
