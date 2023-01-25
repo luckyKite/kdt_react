@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -56,6 +56,7 @@ function WordForm() {
     }).then (res => {
       console.log(res);
       alert("단어가 추가되었습니다.");
+      navigate("/");
     }).catch(err => console.log(err));
 
   }

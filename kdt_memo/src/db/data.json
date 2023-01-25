@@ -68,7 +68,7 @@
       "day": 1,
       "eng": "grape",
       "kor": "포도",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": 5,
@@ -132,6 +132,20 @@
       "kor": "책",
       "isDone": false,
       "id": 13
+    },
+    {
+      "day": 1,
+      "eng": "flower",
+      "kor": "꽃",
+      "isDone": false,
+      "id": 14
+    },
+    {
+      "day": 1,
+      "eng": "Bottle",
+      "kor": "병",
+      "isDone": false,
+      "id": 15
     }
   ]
 }
