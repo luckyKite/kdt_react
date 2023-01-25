@@ -17,14 +17,14 @@
       "day" : 1,
       "eng" : "apple",
       "kor" : "사과",
-      "isDone" : false
+      "isDone" : true
     },
     {
       "id" : 2,
       "day" : 1,
       "eng" : "banana",
       "kor" : "바나나",
-      "isDone" : false
+      "isDone" : true
     },
     {
       "id" : 3,

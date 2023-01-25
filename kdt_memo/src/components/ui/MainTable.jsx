@@ -1,12 +1,12 @@
-import Table from 'react-bootstrap/Table';
-import Forms from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
 
+import Table from 'react-bootstrap/Table';
 import data from '../../db/data.json';
+
+import WordList from './WordList';
 
 function MainTable() {
 
-  console.log(data);
 
   return (
     <Table striped bordered hover>
@@ -22,20 +22,10 @@ function MainTable() {
       <tbody>
         {
           data.words.map(word => (
-          <tr key={word.id}>
-            <td>{word.id}</td>
-            <td>
-              <Forms>
-                <Forms.Check type="checkbox" />
-              </Forms>
-            </td>
-            <td>{word.eng}</td>
-            <td>{word.kor}</td>
-            <td>
-              <Button variant="primary">답 보기</Button>{' '}
-              <Button variant="secondary">삭제</Button>
-            </td>
-          </tr>
+            <WordList 
+              key={word.id}
+              word={word}
+            />
           ))
         }
         
