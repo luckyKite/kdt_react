@@ -26,7 +26,7 @@ function MainTable() {
           <td>apple</td>
           <td>사과</td>
           <td>
-            <Button variant="primary">답 보기</Button>
+            <Button variant="primary">답 보기</Button>{' '}
             <Button variant="secondary">삭제</Button>
           </td>
         </tr>
