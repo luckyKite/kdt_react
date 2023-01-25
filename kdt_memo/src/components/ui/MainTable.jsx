@@ -2,8 +2,12 @@ import Table from 'react-bootstrap/Table';
 import Forms from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import data from '../../db/data.json';
 
 function MainTable() {
+
+  console.log(data);
+
   return (
     <Table striped bordered hover>
       <thead>
