@@ -6,7 +6,7 @@ function Cart() {
   const [cartDatas, setCartDatas] = useState();
 
   useEffect( () => {
-    fetch(`https://localhost:3001/carts?userId=${userId}`)
+    fetch(`http://localhost:3001/carts?userId=${userId}`)
     .then(res => res.json())
     .then(data => {
       console.log(data);

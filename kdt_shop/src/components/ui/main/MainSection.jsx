@@ -7,7 +7,7 @@ function MainSection() {
   const [productData, setProductData] = useState([]);
 
   useEffect(() => {
-    fetch('https://localhost:3001/products')
+    fetch('http://localhost:3001/products')
     .then(res => res.json())
     .then(data => {
       console.log(data);

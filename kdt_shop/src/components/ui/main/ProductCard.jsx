@@ -7,7 +7,7 @@ function productCard({product}) {
   const userId = 1;
 
   const handleAddCart = () => {
-    fetch('https://localhost:3001/carts', {
+    fetch('http://localhost:3001/carts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
