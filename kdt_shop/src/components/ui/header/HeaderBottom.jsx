@@ -1,8 +1,9 @@
 import React from 'react';
+import style from './HeaderBottom.module.css'
 
 function HeaderBottom() {
   return (
-    <nav>
+    <nav className={style.gnb}>
       <ul>
         <li>홈</li>
         <li>특가</li>
