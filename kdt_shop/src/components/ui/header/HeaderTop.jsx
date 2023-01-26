@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './HeaderTop.module.css'
 
 function HeaderTop() {
   return (
-    <div className='headerTopWrap'>
-      <h1 className='logo'>SSG.COM</h1>
+    <div className={styles.headerTopWrap}>
+      <h1 className={styles.logo}>SSG.COM</h1>
       <div className='search'>
         <input type="text" placeholder='Search' />
       </div>
