@@ -7,17 +7,13 @@ function productCard({product}) {
   const userId = 1;
 
   const handleAddCart = () => {
-    fetch('https://dummyjson.com/carts/add', {
+    fetch('https://localhost:3001/carts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
+        productId: product.id,
         userId: userId,
-        products: [
-          {
-            id: product.id,
-            quantity: 1,
-          }
-        ]
+        qty: 1
       })
     })
     .then(res => {
@@ -34,10 +30,11 @@ function productCard({product}) {
       <div className={style.productCard}>
           <Link to= {`/product-detail/${product.id}`}>
           <img src={product.thumbnail} alt={product.description} />
-          <p>{product.title}</p>
-          <p>{product.description}</p>
-          <p>{product.price}</p>
           </Link>
+          <p className={style.title}>{product.title}</p>
+          <p>{product.description}</p>
+          <p>{product.price} $</p>
+         
           <div className={style.cartBtn} onClick={handleAddCart}>ADD CART</div>
       </div>
     </>

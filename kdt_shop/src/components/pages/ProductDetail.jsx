@@ -6,7 +6,7 @@ function ProductDetail() {
   const [product, setProduct] = useState();
 
   useEffect( () => {
-    fetch(`https://dummyjson.com/products/${id}`)
+    fetch(`https://localhost:3001/products/${id}`)
     .then(res => res.json())
     .then(data => {
       console.log(data);
