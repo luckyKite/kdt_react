@@ -11,3 +11,18 @@
   padding: 5px 14px;
   font-size: 0.9rem;
 }
+
+.gnb ul li a {
+  padding: 8px;
+  color: rgb(0, 0, 0, 0.65);
+  text-decoration: none;
+}
+
+.active {
+}
+
+.active a {
+  color: #000 !important;
+  font-weight: bold !important; 
+  border-bottom: 3px solid #000;
+}

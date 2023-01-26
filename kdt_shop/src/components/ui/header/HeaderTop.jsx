@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './HeaderTop.module.css'
+import style from './HeaderTop.module.css'
 
 function HeaderTop() {
   return (
-    <div className={styles.headerTopWrap}>
-      <h1 className={styles.logo}>SSG.COM</h1>
-      <div className='search'>
-        <input type="text" placeholder='Search' />
+    <div className={style.headerTopWrap}>
+      <h1 className={style.logo}>SSG.COM</h1>
+      <div className={style.search}>
+        <input type="text" />
       </div>
       <div className='cartIcon'>
         장바구니 아이콘
