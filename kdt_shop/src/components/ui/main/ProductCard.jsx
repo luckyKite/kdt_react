@@ -13,6 +13,7 @@ function productCard({product}) {
           <p>{product.description}</p>
           <p>{product.price}</p>
           </Link>
+          <div className={style.cartBtn}>ADD CART</div>
       </div>
     </>
    );
