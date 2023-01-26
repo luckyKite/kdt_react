@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Lottie from 'react-lottie';
 import style from './HeaderTop.module.css';
 import * as animationData from '../../../lottie/Cart.json';
+import { Link } from 'react-router-dom';
 
 function HeaderTop() {
 
@@ -16,9 +17,13 @@ function HeaderTop() {
 
   const [searchWord, setSearchWord] = useState('');
 
+  const searchRef = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if(e.key ==='Enter') {
+      console.log('Enter key pressed');
+    }
   }
 
   const handleChange = (e) => {
@@ -26,9 +31,13 @@ function HeaderTop() {
     setSearchWord(e.target.value);
   }
 
+  useEffect( ()=> {
+    console.log(searchRef);
+  },[searchRef]);
+
   return ( 
     <div className={style.headerTopWrap}>
-      <h1 className={style.logo}>SSG.COM</h1>
+      <h1 className={style.logo}><Link to={'/'}>SSG.COM</Link></h1>
       <form className={style.search} onSubmit={handleSubmit}>
         <input type="text" 
           onChange={handleChange}
@@ -36,10 +45,12 @@ function HeaderTop() {
         />
       </form>
       <div className='cartIcon'>
+        <Link to={'/cart'}>
         <Lottie options={defaultOptions}
           height={60}
           width={60}
         />
+        </Link>
       </div>
     </div>
    );
