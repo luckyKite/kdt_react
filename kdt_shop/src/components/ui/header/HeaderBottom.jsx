@@ -6,14 +6,14 @@ import { Link, useLocation } from 'react-router-dom';
 function HeaderBottom() {
 
   const location = useLocation();
-  console.log(location.pathname);
+  const path = location.pathname;
 
   return ( 
     <nav className={style.gnb}>
       <ul>
         {
           gnbMenu.map( menu => (
-            <li key={menu.id} className={menu.link === location.pathname ? `${style.active}`:''}>
+            <li key={menu.id} className={menu.link === path ? `${style.active}`:''}>
               <Link to={menu.link}>{menu.name}</Link>
             </li>
           ))

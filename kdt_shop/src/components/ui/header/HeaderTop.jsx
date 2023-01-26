@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Lottie from 'react-lottie';
 import style from './HeaderTop.module.css';
 import * as animationData from '../../../lottie/Cart.json';
@@ -17,7 +17,7 @@ function HeaderTop() {
 
   const [searchWord, setSearchWord] = useState('');
 
-  const searchRef = useRef();
+  const searchRef = useRef('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,10 +30,6 @@ function HeaderTop() {
     console.log(e.target.value);
     setSearchWord(e.target.value);
   }
-
-  useEffect( ()=> {
-    console.log(searchRef);
-  },[searchRef]);
 
   return ( 
     <div className={style.headerTopWrap}>
