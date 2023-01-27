@@ -1,10 +1,11 @@
 import React from 'react';
 import style from './ProductCard.module.css';
-import { isRouteErrorResponse, Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-function productCard({product}) {
+function ProductCard({product}) {
   
   const userId = 1;
+  const navigate = useNavigate();
 
   const handleAddCart = () => {
     fetch('http://localhost:3001/carts', {
@@ -20,6 +21,7 @@ function productCard({product}) {
       res.json();
       if(res.ok) {
         window.alert('장바구니 담기');
+        navigate('/cart');
       }
     })
     .catch(err => console.error(err));
@@ -33,12 +35,17 @@ function productCard({product}) {
           </Link>
           <p className={style.title}>{product.title}</p>
           <p>{product.description}</p>
-          <p>{product.price} $</p>
+          <p>$ {product.price}</p>
          
-          <div className={style.cartBtn} onClick={handleAddCart}>ADD CART</div>
+          <div 
+          onClick={handleAddCart}
+          className={style.cartBtn} 
+          >
+            ADD CART
+          </div>
       </div>
     </>
    );
 }
 
-export default productCard;
+export default ProductCard;

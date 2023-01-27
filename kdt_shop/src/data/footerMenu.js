@@ -23,7 +23,7 @@ export const footerMenu = [
     link: '/my',
     icon: 'my.svg'
   },
-   {
+  {
     id: 5,
     name: '최근본',
     link: '/recently',
