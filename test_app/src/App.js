@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import Test from './Test';
+import Price from './Price';
+
+import { DataContext } from './DataContext';
 
 function App() {
+
+  const [data, setData] = useState(0);
+  const [price, setPrice] = useState(100);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect( ()=> {
+    setTotalPrice(data*price)
+  },[price, data])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DataContext.Provider value={{data, setData, price, setPrice, totalPrice, setTotalPrice}}>
+      <div className="App">
+        <h1>total: {totalPrice}</h1>
+        <h1>qty: {data}</h1>
+        <Test />
+        <Price />
+      </div>
+    </DataContext.Provider>
   );
 }
 
