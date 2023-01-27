@@ -16,28 +16,18 @@
   width: 60px;
 }    
 
-.nav {
+nav {
   float: right;
 }
 
-ul li {
+nav li {
   list-style-type: none;
-  float: left;
-}
-    
-.menu {
+  float: left; 
   width: 20vw;
-  height: 50px;
+  margin-top: 10px;
 }
 
-.cart {
-  width: 20vw;
-  height: 50px;
+.link {
+  text-decoration: none;
 }
 
-.story {
-  width: 20vw;
-  height: 50px;
-  border: none;
-}
-    
