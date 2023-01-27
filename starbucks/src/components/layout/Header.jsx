@@ -6,17 +6,21 @@ import style from './Header.module.css';
 function Header() {
   return (
     <div className={style.header}>
-      <div className={style.logo}><img src={logo} alt="로고이미지" /></div>
-      <nav className={style.nav}>
+      <div className={style.logo}>        
+        <Link to={'/main'}>
+          <img src={logo} alt="로고이미지" />
+        </Link>
+      </div>
+      <nav>
         <ul>
-          <li className={style.menu}>Menu</li>
-          <li className={style.cart}>Cart</li>
-          <li className={style.story}>Story</li>
+          <li><Link to={'/menu'} className={style.link}>Menu</Link></li>
+          <li><Link to={'/cart'} className={style.link}>Cart</Link></li>
+          <li><Link to={'/story'} className={style.link}>Story</Link></li>
         </ul>
       </nav>
     </div>
 
-  );
+  ); 
 }
 
 export default Header;
