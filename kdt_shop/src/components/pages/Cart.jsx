@@ -6,6 +6,7 @@ function Cart() {
 
   const userId = 1;
   const [cartDatas, setCartDatas] = useState([]);
+  const [delCheck, setDelCheck] = useState(false);
 
   useEffect( () => {
     fetch(`http://localhost:3001/carts?userId=${userId}`)
@@ -15,7 +16,7 @@ function Cart() {
       setCartDatas(data);
     });
 
-  },[userId]);
+  },[userId, delCheck]);
 
 
   return (
@@ -25,6 +26,8 @@ function Cart() {
           <CartListCard 
             key={cartData.id}
             cartData={cartData}
+            delCheck={delCheck}
+            setDelCheck={setDelCheck}
           />
         ) )
       }
