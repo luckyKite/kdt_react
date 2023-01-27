@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import QtyContext from '../context/QtyContext';
 import CartListCard from '../ui/cart/CartListCard';
 import style from './Cart.module.css';
 
@@ -9,6 +10,7 @@ function Cart() {
   const [delCheck, setDelCheck] = useState(false);
 
   useEffect( () => {
+    console.log(delCheck);
     fetch(`http://localhost:3001/carts?userId=${userId}`)
     .then(res => res.json())
     .then(data => {
