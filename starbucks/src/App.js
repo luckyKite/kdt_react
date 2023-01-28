@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Main />}/>
-          <Route path='/manu' element={<Menu />}/>
+          <Route path='/menu' element={<Menu />}/>
           <Route path='/cart' element={<Cart />}/>
           <Route path='/story' element={<Story />}/>
         </Routes>
