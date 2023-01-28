@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className={style.header}>
       <div className={style.logo}>        
-        <Link to={'/main'}>
+        <Link to={'/'}>
           <img src={logo} alt="로고이미지" />
         </Link>
       </div>
