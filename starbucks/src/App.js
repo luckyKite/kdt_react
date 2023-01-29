@@ -7,6 +7,7 @@ import Header from './components/layout/Header';
 import Cart from './components/pages/Cart';
 import Main from './components/pages/Main';
 import Menu from './components/pages/Menu';
+import MenuDetail from './components/pages/MenuDetail';
 import Story from './components/pages/Story';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main />}/>
           <Route path='/menu' element={<Menu />}/>
+          <Route path='/menu-detail/:id' element={<MenuDetail />}/>
           <Route path='/cart' element={<Cart />}/>
           <Route path='/story' element={<Story />}/>
         </Routes>

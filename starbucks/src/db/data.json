@@ -2,7 +2,7 @@
   "menu": [
     {
       "id": 1,
-      "title": "Nitro Vanilla Cream",
+      "title": "Nitro Vanilla Cream (나이트로 바닐라 크림)",
       "description": "부드러운 목넘김의 나이트로 커피와 바닐라 크림의 매력을 한번에 느껴보세요!",
       "price": 5800,
       "size": "tall",
@@ -15,7 +15,7 @@
     },
     {
       "id": 2,
-      "title": "Iced Coffee",
+      "title": "Iced Coffee (아이스 커피)",
       "description": "깔끔하고 상큼함이 특징인 시원한 아이스 커피",
       "price": 4500,
       "size": "tall",
@@ -28,7 +28,7 @@
     },
     {
       "id": 3,
-      "title": "Black Rice Latte",
+      "title": "Black Rice Latte (블랙 햅쌀 고봉 라떼)",
       "description": "검은 토끼의 해에 새롭게 돌아온 햅쌀 라떼 에스프레소 샷과 어우러진 쌀, 흑임자가 더해져 더욱 고소해지고 입에서 톡톡 터지는 흑미 토핑이 소복하게 쌓여 건강하게 즐기는 라떼 음료",
       "price": 6300,
       "size": "tall",
@@ -41,7 +41,7 @@
     },
     {
       "id": 4,
-      "title": "Starbucks® Turmeric Latte",
+      "title": "Starbucks® Turmeric Latte (스타벅스 튜메릭 라떼)",
       "description": "몸에 좋은 튜메릭이 은은하고 담백하게 블론드 샷과 어우러진 라떼 추운 겨울철 가슴 속에서부터 따뜻한 기운을 복돋아 주는 이국적인 느낌의 라떼 음료",
       "price": 6100,
       "size": "tall",
@@ -54,7 +54,7 @@
     },
     {
       "id": 5,
-      "title": "Caramel Macchiato",
+      "title": "Caramel Macchiato (카라멜 마키아또)",
       "description": "향긋한 바닐라 시럽과 따뜻한 스팀 밀크 위에 풍성한 우유 거품을 얹고 점을 찍듯이 에스프레소를 부은 후 벌집 모양으로 카라멜 드리즐을 올린 달콤한 커피 음료",
       "price": 5900,
       "size": "tall",
@@ -67,7 +67,7 @@
     },
     {
       "id": 6,
-      "title": "Cappuccino",
+      "title": "Cappuccino (카푸치노)",
       "description": "풍부하고 진한 에스프레소에 따뜻한 우유와 벨벳 같은 우유 거품이 1:1 비율로 어우러져 마무리된 커피 음료",
       "price": 5000,
       "size": "tall",
@@ -80,7 +80,7 @@
     },
     {
       "id": 7,
-      "title": "Caffe Mocha",
+      "title": "Caffe Mocha (카페 모카)",
       "description": "진한 초콜릿 모카 시럽과 풍부한 에스프레소를 스팀 밀크와 섞어 휘핑크림으로 마무리한 음료로 진한 에스프레소와 초콜릿 맛이 어우러진 커피",
       "price": 5500,
       "size": "tall",
@@ -93,7 +93,7 @@
     },
     {
       "id": 8,
-      "title": "Java Chip Chocolate Affogato",
+      "title": "Java Chip Chocolate Affogato (자바 칩 초콜릿 아포가토)",
       "description": "유기농 초콜릿 아이스크림에 스타벅스의 에스프레소를 붓고 달콤한 자바칩을 토핑한 아포가토입니다.",
       "price": 6600,
       "size": "tall",
@@ -106,7 +106,7 @@
     },
     {
       "id": 9,
-      "title": "Vanilla Cream Frappuccino",
+      "title": "Vanilla Cream Frappuccino (바닐라 크림 프라푸치노)",
       "description": "신선한 우유와 바닐라 시럽이 어우러진 크림 프라푸치노",
       "price": 5100,
       "size": "tall",
@@ -119,7 +119,7 @@
     },
     {
       "id": 10,
-      "title": "Mango Passion Fruit Blended",
+      "title": "Mango Passion Fruit Blended (망고 패션 프루트 블렌디드)",
       "description": "망고 패션 프루트 주스와 블랙 티가 깔끔하게 어우러진 과일 블렌디드",
       "price": 5400,
       "size": "tall",
