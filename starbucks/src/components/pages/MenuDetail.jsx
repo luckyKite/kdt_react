@@ -22,6 +22,7 @@ function MenuDetail() {
       {
         menu &&
         <div className={style.menuWrap}>
+          <h1>상세 정보</h1>
           <img src={menu.images} alt="음료사진"/>
           <h2>{menu.title}</h2>
           <h4>{menu.description}</h4>
