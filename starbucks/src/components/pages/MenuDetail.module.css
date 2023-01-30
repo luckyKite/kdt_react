@@ -1,4 +1,8 @@
-.menuWrap {
-  padding: 30px;
+.details {
+  padding: 25px 70px;
   text-align: left;
+}
+
+.details h1 {
+  margin-bottom: 70px;
 }

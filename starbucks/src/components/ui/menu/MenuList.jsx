@@ -5,22 +5,47 @@ import { Link } from 'react-router-dom';
 
 function MenuList() {
 
+  const [menu, setMenu] = useState();
+
+  const handleAddCart = () => {
+    fetch('http://localhost:3001/cart', {
+      method: 'POST',
+      headers: { 'Content-Type' : 'application/json'},
+      body: JSON.stringify({
+        menuId: menu.id,
+        userId: 1,
+        qty:1,
+      })
+    })
+    .then(res => {
+      res.json();
+      if(res.ok) {
+        window.alert(`카트에 추가합니다.`);
+      }
+    })
+  }
+
+  useEffect( () => {
+    fetch(`http://localhost:3001/menu`)
+    .then(res => res.json())
+    .then(data => {
+      setMenu(data);
+    })
+  },[]);
+
   return (
     <div className={style.choice}>
-    <h2> 음료를 선택하세요!</h2>
       <ul className={style.menuList}>
         {
-          menus.menu.map( menu =>
+          menu && menu.map( menu =>
           <li key={menu.id}>
             <Link to={`/menu-detail/${menu.id}`}>
               <img src={menu.images} alt="음료사진"/>
             </Link>
             <div>{menu.title}</div>
             <button 
-              className={style.btn}
-              onClick={ () => {
-                alert(`${menu.title} 카트에 추가합니다.`)
-              }}
+              className={style.btn} 
+              onClick={handleAddCart}
             >
               카트에 담기
             </button>

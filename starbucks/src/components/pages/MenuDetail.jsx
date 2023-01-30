@@ -18,11 +18,11 @@ function MenuDetail() {
 
 
   return (
-    <div>
+    <div className={style.details}>
+      <h1>상세 정보</h1>
       {
         menu &&
-        <div className={style.menuWrap}>
-          <h1>상세 정보</h1>
+        <div className={style.menuWrap}>       
           <img src={menu.images} alt="음료사진"/>
           <h2>{menu.title}</h2>
           <h4>{menu.description}</h4>
