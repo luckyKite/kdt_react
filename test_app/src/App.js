@@ -1,30 +1,24 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import Test from './Test';
-import Price from './Price';
+import Header from './components/layout/Header';
+import Main from './components/pages/Main';
+import Login from './components/pages/Login';
 
-import { DataContext } from './DataContext';
+import { RecoilRoot, useRecoilValue } from 'recoil';
+import { loginState } from './components/state/LoginState';
 
 function App() {
 
-  const [data, setData] = useState(0);
-  const [price, setPrice] = useState(100);
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  useEffect( ()=> {
-    setTotalPrice(data*price)
-  },[price, data])
-
+  const isLogin = useRecoilValue(loginState);
 
   return (
-    <DataContext.Provider value={{data, setData, price, setPrice, totalPrice, setTotalPrice}}>
-      <div className="App">
-        <h1>total: {totalPrice}</h1>
-        <h1>qty: {data}</h1>
-        <Test />
-        <Price />
-      </div>
-    </DataContext.Provider>
+    <div className='App'>
+      <Header />
+      {
+        isLogin ? <Main /> : <Login />
+      }     
+      
+    </div>
   );
 }
 
