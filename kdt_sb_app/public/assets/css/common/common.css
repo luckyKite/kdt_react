@@ -1,0 +1,14 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  background-color: var(--sb-bg);
+}

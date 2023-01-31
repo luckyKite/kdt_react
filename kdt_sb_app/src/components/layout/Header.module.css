@@ -1,0 +1,30 @@
+.logo {
+  width: 20%;
+}
+
+.logo img {
+  width: 45px;
+}
+
+.logo h1 {
+  font-size: 0px;
+}
+
+.headerMenu {
+  width: 50%;
+}
+
+.headerMenu ul {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.headerMenu ul li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+.headerMenu ul li img {
+  width: 25px;
+}
