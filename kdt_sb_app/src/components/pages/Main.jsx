@@ -1,18 +1,14 @@
 import React from 'react';
-import Title from '../ui/Title';
+import MainBanner from '../widgets/MainBanner';
+import withAuth from '../withAuth/withAuth';
 
 function Main() {
-  return (
+  return ( 
     <>
-      <Title        
-        title="Main"
-        detail="Main Page"
-        isView={true}
-      />
-
+      <MainBanner />
     </>
-    
-  );
+
+   );
 }
 
-export default Main;
+export default withAuth(Main);

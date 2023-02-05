@@ -1,22 +1,23 @@
 import React from 'react';
-import MenuList from '../../widgets/MenuList';
-import MenuSearchBox from '../../widgets/MenuSearchBox';
 import Title from '../ui/Title';
+import MenuList from '../widgets/MenuList';
+import MenuSearchBox from '../widgets/MenuSearchBox';
+import withAuth from '../withAuth/withAuth';
 
 function Menu() {
-  return (
+  return ( 
     <section>
       <Title 
         title="Menu"
         detail="Coffee Menu Lists"
-        align="right"
-        isView={false}
+        align="left"
+        isView={true}
       />
       <MenuSearchBox />
       <MenuList />
     </section>
-    
-  );
+
+   );
 }
 
-export default Menu;
+export default withAuth(Menu);

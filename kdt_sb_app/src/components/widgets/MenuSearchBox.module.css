@@ -1,0 +1,52 @@
+.searchBox {
+  margin: 20px 10px;
+  padding: 8px 16px;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 5px;
+  box-shadow: 0px 4px 5px rgba(216, 216, 216, 0.501);
+  transition: 1s;
+}
+
+.searchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchHeaderIcon img {
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+.down img {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.searchBody {
+  display: block;
+  transition: 0.5s;
+  animation: viewBox 0.5s;
+}
+
+.searchBodyNone {
+  display: none;
+
+}
+.searchCategory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes viewBox {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

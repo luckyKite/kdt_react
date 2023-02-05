@@ -1,0 +1,64 @@
+.bannerWrap {
+  width: 100%;
+  /* 넓이 1 : 높이 2.64 비율 계산 */
+  height: 264vw; 
+  background-color: var(--sb-bg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.bannerWrap img {
+  width: 81vw;
+  margin: 2vw auto;
+}
+
+.bannerWrap img:first-child {
+  width: 40vw;
+  margin: 10vw auto;
+  animation: viewImg 1s alternate;
+}
+
+.bannerWrap img:nth-child(2), .bannerWrap img:nth-child(4) {
+  animation: leftViewImg 1s alternate;
+}
+
+.bannerWrap img:nth-child(3) {
+  animation: rightViewImg 1s alternate;
+}
+
+@keyframes viewImg {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes leftViewImg {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes rightViewImg {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+  

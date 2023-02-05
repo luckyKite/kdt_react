@@ -17,7 +17,7 @@
 .headerMenu ul {
   display: flex;
   justify-content: right;
-  align-items: center;
+  align-items: center;  
 }
 
 .headerMenu ul li {
